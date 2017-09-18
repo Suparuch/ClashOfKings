@@ -50,11 +50,11 @@ public class DetailActivity extends AppCompatActivity {
 
             titleTextView.setText(title);
             Resources res = getResources();
-            String mDrawableName = imageArray[mTag];
+            String mDrawableName = imageArray[mTag-1];
             int resID = res.getIdentifier(mDrawableName , "drawable", getPackageName());
             Drawable drawable = res.getDrawable(resID);
             imageView.setImageDrawable(drawable);
-            descTextView.setText(descArray[mTag]);
+            descTextView.setText(descArray[mTag - 1]);
         }
 
 
