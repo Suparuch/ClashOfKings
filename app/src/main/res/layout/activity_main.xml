@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context="com.somkual.clashofkings.MainActivity">
+
+
+    <!-- view for AdMob Banner Ad -->
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/adView"
+        android:layout_marginTop="12dp"
+        android:text="Clash of Kings Guide: Tips, Tricks and Strategies"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/multiAutoCompleteTextView"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        ads:srcCompat="@drawable/banner" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_above="@+id/more_detail"
+        android:text="Clash of Kings is an interesting online game in which you battle to control cities, towns and resources. You can fight with thousands of other players from around the world. In general, you will perform 2 main missions in the game to accumulate wealth and build your own kingdom. One you will fight with the other clans in an attempt to occupy their kingdom. Secondly, you will build alliance with other groups to strengthen your army and help each other during the battle and siege the city. Needless to say, if you excel at war and build an alliance then you will go far in the game. But this is easier said than done. That's why we have gathered the following tips and techniques to help you get better in the game. Increase your chances of winning the war using these tips"
+        android:focusable="false"
+        android:focusableInTouchMode="true"/>
+
+    <Button
+        android:id="@+id/more_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="More Detail"
+        android:onClick="moreAction"/>
+
+
+</RelativeLayout>
